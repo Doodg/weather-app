@@ -1,4 +1,4 @@
-# Photo Gallery
+# Weather App
 Weather App is an android app created for learning proposes.
 
 ## App Idea
