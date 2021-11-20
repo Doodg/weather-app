@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Weather App</string>
+    <string name="search_hint">Enter city name</string>
+    <string name="city_not_found">City not found</string>
+    <string name="error_occored">Something went wrong, try again later</string>
+    <string name="temp">Temp: %s°F</string>
+    <string name="temp_feel_like">Feel like: %s°F</string>
+    <string name="pressure_symbole">Pressure: %s p</string>
+    <string name="humidity">Humidity:%s</string>
+    <string name="wind_speed">Wind speed:%s</string>
+    <string name="city_name">City:%s</string>
+</resources>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/weatherToolBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_500"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/citySearchEditText"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/search_edittext"
+            android:drawableStart="@android:drawable/ic_menu_search"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionSearch"
+            android:inputType="text|textNoSuggestions"
+            android:lines="1"
+            android:maxLines="1" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical|center_horizontal"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weatherToolBar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/weatherInfoContainerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/weatherToolBar">
+
+
+        <ImageView
+            android:id="@+id/condIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:src="@android:drawable/ic_menu_search" />
+
+        <TextView
+            android:id="@+id/cityNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/condIcon"
+            app:layout_constraintTop_toBottomOf="@+id/condIcon"
+            tools:text="city" />
+        <TextView
+            android:id="@+id/tempTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/cityNameTextView"
+            app:layout_constraintTop_toBottomOf="@+id/cityNameTextView"
+            tools:text="temp" />
+
+        <TextView
+            android:id="@+id/feelLikeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/tempTextView"
+            app:layout_constraintTop_toBottomOf="@+id/tempTextView"
+            tools:text="feelLike" />
+
+        <TextView
+            android:id="@+id/pressLabTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/feelLikeTextView"
+            app:layout_constraintTop_toBottomOf="@+id/feelLikeTextView"
+            tools:text="Pressure" />
+
+        <TextView
+            android:id="@+id/humLabTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/pressLabTextView"
+            app:layout_constraintTop_toBottomOf="@+id/pressLabTextView"
+            tools:text="Humidity" />
+
+
+        <TextView
+            android:id="@+id/windSpeed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@+id/humLabTextView"
+            app:layout_constraintTop_toBottomOf="@+id/humLabTextView"
+            tools:text="Wind Speed" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
